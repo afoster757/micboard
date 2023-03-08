@@ -1,1 +1,5 @@
 tornado
+dropbox
+pypco
+pytz
+-e git+https://github.com/billdeitrick/pypco.git#egg=pypco

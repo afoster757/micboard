@@ -1,0 +1,684 @@
+{
+    "config": {
+        "groups": [
+            {
+                "group": 1,
+                "slots": [
+                    1,
+                    3,
+                    2,
+                    4
+                ],
+                "title": "Group 1 Title"
+            },
+            {
+                "group": 2,
+                "slots": [
+                    4,
+                    3,
+                    2,
+                    1
+                ],
+                "title": "Group 2 Title"
+            },
+            {
+                "group": 9,
+                "slots": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "title": "Group 9 Title"
+            }
+        ],
+        "micboard_version": "0.8.5",
+        "port": 8058,
+        "slots": [
+            {
+                "channel": 1,
+                "ip": "192.168.1.101",
+                "slot": 1,
+                "type": "ulxd"
+            },
+            {
+                "channel": 1,
+                "ip": "192.168.1.102",
+                "slot": 2,
+                "type": "ulxd"
+            },
+            {
+                "channel": 1,
+                "ip": "192.168.1.103",
+                "slot": 3,
+                "type": "ulxd"
+            },
+            {
+                "channel": 1,
+                "ip": "192.168.1.104",
+                "slot": 4,
+                "type": "ulxd"
+            },
+            {
+                "channel": 1,
+                "ip": "192.168.1.105",
+                "slot": 5,
+                "type": "ulxd"
+            },
+            {
+                "channel": 1,
+                "ip": "192.168.1.106",
+                "slot": 6,
+                "type": "ulxd"
+            },
+            {
+                "channel": 1,
+                "ip": "192.168.1.107",
+                "slot": 7,
+                "type": "ulxd"
+            },
+            {
+                "channel": 1,
+                "ip": "192.168.1.108",
+                "slot": 8,
+                "type": "ulxd"
+            },
+            {
+                "channel": 1,
+                "ip": "192.168.1.109",
+                "slot": 9,
+                "type": "ulxd"
+            },
+            {
+                "channel": 1,
+                "ip": "192.168.1.110",
+                "slot": 10,
+                "type": "qlxd"
+            }
+        ],
+        "uuid": "1ffb3233-04af-4255-b834-505f29f3dfb5"
+    },
+    "discovered": [],
+    "gif": [],
+    "jpg": [
+        "lauren neely.jpg",
+        "whitney king.jpg",
+        "brittain jeane.jpg",
+        "donald brown.jpg",
+        "adam foster.jpg",
+        "johnathan moss.jpg",
+        "houston knox.jpg",
+        "risa simonette.jpg",
+        "shiran garcia.jpg",
+        "amanda kinner.jpg",
+        "johnathan dean.jpg",
+        "kelly moss.jpg",
+        "rebekah saunders.jpg"
+    ],
+    "mp4": [],
+    "receivers": [
+        {
+            "ip": "192.168.1.101",
+            "raw": {
+                "DEVICE_ID": "QLXD4",
+                "ENCRYPTION": "OFF",
+                "FW_VER": "2.3.24.10",
+                "MAC_ADDR": "00:0E:DD:44:4A:07"
+            },
+            "status": "CONNECTED",
+            "tx": [
+                {
+                    "antenna": "XX",
+                    "audio_level": 0,
+                    "battery": 255,
+                    "channel": 1,
+                    "frequency": "478.850",
+                    "id": "",
+                    "name": "",
+                    "name_raw": "Mic 8",
+                    "quality": 255,
+                    "raw": {
+                        "ALL": "XX 029 000",
+                        "AUDIO_GAIN": "008",
+                        "AUDIO_LVL": "000",
+                        "BATT_BARS": "255",
+                        "BATT_CHARGE": "255",
+                        "BATT_CYCLE": "65535",
+                        "BATT_HEALTH": "255",
+                        "BATT_RUN_TIME": "65535",
+                        "BATT_TEMP_C": "255",
+                        "BATT_TEMP_F": "255",
+                        "BATT_TYPE": "UNKN",
+                        "CHAN_NAME": "Mic 8",
+                        "ENCRYPTION_WARNING": "OFF",
+                        "FREQUENCY": "478850",
+                        "GROUP_CHAN": "--,--",
+                        "METER_RATE": "00100",
+                        "RF_ANTENNA": "XX",
+                        "RX_RF_LVL": "034",
+                        "TX_DEVICE_ID": "",
+                        "TX_MENU_LOCK": "UNKN",
+                        "TX_MUTE_BUTTON_STATUS": "UNKN",
+                        "TX_MUTE_STATUS": "UNKN",
+                        "TX_OFFSET": "255",
+                        "TX_POWER_SOURCE": "UNKN",
+                        "TX_PWR_LOCK": "UNKN",
+                        "TX_RF_PWR": "UNKN",
+                        "TX_TYPE": "UNKN"
+                    },
+                    "rf_level": 25,
+                    "runtime": "",
+                    "slot": 1,
+                    "status": "TX_COM_ERROR",
+                    "tx_offset": 255,
+                    "type": "ulxd"
+                }
+            ],
+            "type": "ulxd"
+        },
+        {
+            "ip": "192.168.1.102",
+            "raw": {
+                "DEVICE_ID": "QLXD4",
+                "ENCRYPTION": "OFF",
+                "FW_VER": "2.3.24.10",
+                "MAC_ADDR": "00:0E:DD:44:41:5E"
+            },
+            "status": "CONNECTED",
+            "tx": [
+                {
+                    "antenna": "XX",
+                    "audio_level": 0,
+                    "battery": 255,
+                    "channel": 1,
+                    "frequency": "477.475",
+                    "id": "",
+                    "name": "",
+                    "name_raw": "Acoustic",
+                    "quality": 255,
+                    "raw": {
+                        "ALL": "XX 034 000",
+                        "AUDIO_GAIN": "022",
+                        "AUDIO_LVL": "000",
+                        "BATT_BARS": "255",
+                        "BATT_CHARGE": "255",
+                        "BATT_CYCLE": "65535",
+                        "BATT_HEALTH": "255",
+                        "BATT_RUN_TIME": "65535",
+                        "BATT_TEMP_C": "255",
+                        "BATT_TEMP_F": "255",
+                        "BATT_TYPE": "UNKN",
+                        "CHAN_NAME": "Acoustic",
+                        "ENCRYPTION_WARNING": "OFF",
+                        "FREQUENCY": "477475",
+                        "GROUP_CHAN": "--,--",
+                        "METER_RATE": "00100",
+                        "RF_ANTENNA": "XX",
+                        "RX_RF_LVL": "037",
+                        "TX_DEVICE_ID": "",
+                        "TX_MENU_LOCK": "UNKN",
+                        "TX_MUTE_BUTTON_STATUS": "UNKN",
+                        "TX_MUTE_STATUS": "UNKN",
+                        "TX_OFFSET": "255",
+                        "TX_POWER_SOURCE": "UNKN",
+                        "TX_PWR_LOCK": "UNKN",
+                        "TX_RF_PWR": "UNKN",
+                        "TX_TYPE": "UNKN"
+                    },
+                    "rf_level": 29,
+                    "runtime": "",
+                    "slot": 2,
+                    "status": "TX_COM_ERROR",
+                    "tx_offset": 255,
+                    "type": "ulxd"
+                }
+            ],
+            "type": "ulxd"
+        },
+        {
+            "ip": "192.168.1.103",
+            "raw": {
+                "DEVICE_ID": "QLXD4",
+                "ENCRYPTION": "OFF",
+                "FW_VER": "2.3.24.10",
+                "MAC_ADDR": "00:0E:DD:44:4A:90"
+            },
+            "status": "CONNECTED",
+            "tx": [
+                {
+                    "antenna": "XX",
+                    "audio_level": 0,
+                    "battery": 255,
+                    "channel": 1,
+                    "frequency": "499.175",
+                    "id": "",
+                    "name": "",
+                    "name_raw": "Mic 9",
+                    "quality": 255,
+                    "raw": {
+                        "ALL": "XX 033 000",
+                        "AUDIO_GAIN": "008",
+                        "AUDIO_LVL": "000",
+                        "BATT_BARS": "255",
+                        "BATT_CHARGE": "255",
+                        "BATT_CYCLE": "65535",
+                        "BATT_HEALTH": "255",
+                        "BATT_RUN_TIME": "65535",
+                        "BATT_TEMP_C": "255",
+                        "BATT_TEMP_F": "255",
+                        "BATT_TYPE": "UNKN",
+                        "CHAN_NAME": "Mic 9",
+                        "ENCRYPTION_WARNING": "OFF",
+                        "FREQUENCY": "499175",
+                        "GROUP_CHAN": "--,--",
+                        "METER_RATE": "00100",
+                        "RF_ANTENNA": "XX",
+                        "RX_RF_LVL": "036",
+                        "TX_DEVICE_ID": "",
+                        "TX_MENU_LOCK": "UNKN",
+                        "TX_MUTE_BUTTON_STATUS": "UNKN",
+                        "TX_MUTE_STATUS": "UNKN",
+                        "TX_OFFSET": "255",
+                        "TX_POWER_SOURCE": "UNKN",
+                        "TX_PWR_LOCK": "UNKN",
+                        "TX_RF_PWR": "UNKN",
+                        "TX_TYPE": "UNKN"
+                    },
+                    "rf_level": 28,
+                    "runtime": "",
+                    "slot": 3,
+                    "status": "TX_COM_ERROR",
+                    "tx_offset": 255,
+                    "type": "ulxd"
+                }
+            ],
+            "type": "ulxd"
+        },
+        {
+            "ip": "192.168.1.104",
+            "raw": {
+                "DEVICE_ID": "QLXD4",
+                "ENCRYPTION": "OFF",
+                "FW_VER": "2.3.24.10",
+                "MAC_ADDR": "00:0E:DD:44:5D:08"
+            },
+            "status": "CONNECTED",
+            "tx": [
+                {
+                    "antenna": "XX",
+                    "audio_level": 0,
+                    "battery": 255,
+                    "channel": 1,
+                    "frequency": "472.025",
+                    "id": "",
+                    "name": "",
+                    "name_raw": "Mic 10",
+                    "quality": 255,
+                    "raw": {
+                        "ALL": "XX 039 000",
+                        "AUDIO_GAIN": "008",
+                        "AUDIO_LVL": "000",
+                        "BATT_BARS": "255",
+                        "BATT_CHARGE": "255",
+                        "BATT_CYCLE": "65535",
+                        "BATT_HEALTH": "255",
+                        "BATT_RUN_TIME": "65535",
+                        "BATT_TEMP_C": "255",
+                        "BATT_TEMP_F": "255",
+                        "BATT_TYPE": "UNKN",
+                        "CHAN_NAME": "Mic 10",
+                        "ENCRYPTION_WARNING": "OFF",
+                        "FREQUENCY": "472025",
+                        "GROUP_CHAN": "--,--",
+                        "METER_RATE": "00100",
+                        "RF_ANTENNA": "XX",
+                        "RX_RF_LVL": "039",
+                        "TX_DEVICE_ID": "",
+                        "TX_MENU_LOCK": "UNKN",
+                        "TX_MUTE_BUTTON_STATUS": "UNKN",
+                        "TX_MUTE_STATUS": "UNKN",
+                        "TX_OFFSET": "255",
+                        "TX_POWER_SOURCE": "UNKN",
+                        "TX_PWR_LOCK": "UNKN",
+                        "TX_RF_PWR": "UNKN",
+                        "TX_TYPE": "UNKN"
+                    },
+                    "rf_level": 33,
+                    "runtime": "",
+                    "slot": 4,
+                    "status": "TX_COM_ERROR",
+                    "tx_offset": 255,
+                    "type": "ulxd"
+                }
+            ],
+            "type": "ulxd"
+        },
+        {
+            "ip": "192.168.1.105",
+            "raw": {
+                "DEVICE_ID": "QLXD4",
+                "ENCRYPTION": "OFF",
+                "FW_VER": "2.3.24.10",
+                "MAC_ADDR": "00:0E:DD:4F:55:50"
+            },
+            "status": "CONNECTED",
+            "tx": [
+                {
+                    "antenna": "XX",
+                    "audio_level": 0,
+                    "battery": 255,
+                    "channel": 1,
+                    "frequency": "479.775",
+                    "id": "",
+                    "name": "",
+                    "name_raw": "Mic 5",
+                    "quality": 255,
+                    "raw": {
+                        "ALL": "XX 030 000",
+                        "AUDIO_GAIN": "008",
+                        "AUDIO_LVL": "000",
+                        "BATT_BARS": "255",
+                        "BATT_CHARGE": "255",
+                        "BATT_CYCLE": "65535",
+                        "BATT_HEALTH": "255",
+                        "BATT_RUN_TIME": "65535",
+                        "BATT_TEMP_C": "255",
+                        "BATT_TEMP_F": "255",
+                        "BATT_TYPE": "UNKN",
+                        "CHAN_NAME": "Mic 5",
+                        "ENCRYPTION_WARNING": "OFF",
+                        "FREQUENCY": "479775",
+                        "GROUP_CHAN": "--,--",
+                        "METER_RATE": "00100",
+                        "RF_ANTENNA": "XX",
+                        "RX_RF_LVL": "031",
+                        "TX_DEVICE_ID": "",
+                        "TX_MENU_LOCK": "UNKN",
+                        "TX_MUTE_BUTTON_STATUS": "UNKN",
+                        "TX_MUTE_STATUS": "UNKN",
+                        "TX_OFFSET": "255",
+                        "TX_POWER_SOURCE": "UNKN",
+                        "TX_PWR_LOCK": "UNKN",
+                        "TX_RF_PWR": "UNKN",
+                        "TX_TYPE": "UNKN"
+                    },
+                    "rf_level": 26,
+                    "runtime": "",
+                    "slot": 5,
+                    "status": "TX_COM_ERROR",
+                    "tx_offset": 255,
+                    "type": "ulxd"
+                }
+            ],
+            "type": "ulxd"
+        },
+        {
+            "ip": "192.168.1.106",
+            "raw": {},
+            "status": "DISCONNECTED",
+            "tx": [
+                {
+                    "antenna": "XX",
+                    "audio_level": 0,
+                    "battery": 255,
+                    "channel": 1,
+                    "frequency": "000000",
+                    "id": "",
+                    "name": "",
+                    "name_raw": "SLOT 6",
+                    "quality": 255,
+                    "raw": {},
+                    "rf_level": 0,
+                    "runtime": 65535,
+                    "slot": 6,
+                    "status": "RX_COM_ERROR",
+                    "tx_offset": 255,
+                    "type": "ulxd"
+                }
+            ],
+            "type": "ulxd"
+        },
+        {
+            "ip": "192.168.1.107",
+            "raw": {
+                "DEVICE_ID": "QLXD4",
+                "ENCRYPTION": "OFF",
+                "FW_VER": "2.3.24.10",
+                "MAC_ADDR": "00:0E:DD:4E:F3:27"
+            },
+            "status": "CONNECTED",
+            "tx": [
+                {
+                    "antenna": "AX",
+                    "audio_level": 0,
+                    "battery": 5,
+                    "channel": 1,
+                    "frequency": "476.350",
+                    "id": "",
+                    "name": "",
+                    "name_raw": "Lav 2",
+                    "quality": 255,
+                    "raw": {
+                        "ALL": "AX 078 000",
+                        "AUDIO_GAIN": "006",
+                        "AUDIO_LVL": "002",
+                        "BATT_BARS": "005",
+                        "BATT_CHARGE": "096",
+                        "BATT_CYCLE": "00000",
+                        "BATT_HEALTH": "093",
+                        "BATT_RUN_TIME": "00485",
+                        "BATT_TEMP_C": "64",
+                        "BATT_TEMP_F": "116",
+                        "BATT_TYPE": "LION",
+                        "CHAN_NAME": "Lav 2",
+                        "ENCRYPTION_WARNING": "OFF",
+                        "FREQUENCY": "476350",
+                        "GROUP_CHAN": "--,--",
+                        "METER_RATE": "00100",
+                        "RF_ANTENNA": "XB",
+                        "RX_RF_LVL": "083",
+                        "TX_DEVICE_ID": "",
+                        "TX_MENU_LOCK": "OFF",
+                        "TX_MUTE_BUTTON_STATUS": "UNKN",
+                        "TX_MUTE_STATUS": "UNKN",
+                        "TX_OFFSET": "000",
+                        "TX_POWER_SOURCE": "UNKN",
+                        "TX_PWR_LOCK": "OFF",
+                        "TX_RF_PWR": "HIGH",
+                        "TX_TYPE": "QLXD1"
+                    },
+                    "rf_level": 67,
+                    "runtime": "8:05",
+                    "slot": 7,
+                    "status": "GOOD",
+                    "tx_offset": 0,
+                    "type": "ulxd"
+                }
+            ],
+            "type": "ulxd"
+        },
+        {
+            "ip": "192.168.1.108",
+            "raw": {
+                "DEVICE_ID": "QLXD4",
+                "ENCRYPTION": "OFF",
+                "FW_VER": "2.3.24.10",
+                "MAC_ADDR": "00:0E:DD:4E:FD:5F"
+            },
+            "status": "CONNECTED",
+            "tx": [
+                {
+                    "antenna": "XX",
+                    "audio_level": 0,
+                    "battery": 255,
+                    "channel": 1,
+                    "frequency": "473.700",
+                    "id": "",
+                    "name": "",
+                    "name_raw": "Mic 1",
+                    "quality": 255,
+                    "raw": {
+                        "ALL": "XX 037 000",
+                        "AUDIO_GAIN": "008",
+                        "AUDIO_LVL": "000",
+                        "BATT_BARS": "255",
+                        "BATT_CHARGE": "255",
+                        "BATT_CYCLE": "65535",
+                        "BATT_HEALTH": "255",
+                        "BATT_RUN_TIME": "65535",
+                        "BATT_TEMP_C": "255",
+                        "BATT_TEMP_F": "255",
+                        "BATT_TYPE": "UNKN",
+                        "CHAN_NAME": "Mic 1",
+                        "ENCRYPTION_WARNING": "OFF",
+                        "FREQUENCY": "473700",
+                        "GROUP_CHAN": "--,--",
+                        "METER_RATE": "00100",
+                        "RF_ANTENNA": "XX",
+                        "RX_RF_LVL": "037",
+                        "TX_DEVICE_ID": "",
+                        "TX_MENU_LOCK": "UNKN",
+                        "TX_MUTE_BUTTON_STATUS": "UNKN",
+                        "TX_MUTE_STATUS": "UNKN",
+                        "TX_OFFSET": "255",
+                        "TX_POWER_SOURCE": "UNKN",
+                        "TX_PWR_LOCK": "UNKN",
+                        "TX_RF_PWR": "UNKN",
+                        "TX_TYPE": "UNKN"
+                    },
+                    "rf_level": 32,
+                    "runtime": "",
+                    "slot": 8,
+                    "status": "TX_COM_ERROR",
+                    "tx_offset": 255,
+                    "type": "ulxd"
+                }
+            ],
+            "type": "ulxd"
+        },
+        {
+            "ip": "192.168.1.109",
+            "raw": {
+                "DEVICE_ID": "QLXD4",
+                "ENCRYPTION": "OFF",
+                "FW_VER": "2.3.24.10",
+                "MAC_ADDR": "00:0E:DD:4E:32:57"
+            },
+            "status": "CONNECTED",
+            "tx": [
+                {
+                    "antenna": "XX",
+                    "audio_level": 0,
+                    "battery": 255,
+                    "channel": 1,
+                    "frequency": "474.675",
+                    "id": "",
+                    "name": "",
+                    "name_raw": "Lav 1",
+                    "quality": 255,
+                    "raw": {
+                        "ALL": "XX 035 000",
+                        "AUDIO_GAIN": "010",
+                        "AUDIO_LVL": "000",
+                        "BATT_BARS": "255",
+                        "BATT_CHARGE": "255",
+                        "BATT_CYCLE": "65535",
+                        "BATT_HEALTH": "255",
+                        "BATT_RUN_TIME": "65535",
+                        "BATT_TEMP_C": "255",
+                        "BATT_TEMP_F": "255",
+                        "BATT_TYPE": "UNKN",
+                        "CHAN_NAME": "Lav 1",
+                        "ENCRYPTION_WARNING": "OFF",
+                        "FREQUENCY": "474675",
+                        "GROUP_CHAN": "--,--",
+                        "METER_RATE": "00100",
+                        "RF_ANTENNA": "XX",
+                        "RX_RF_LVL": "037",
+                        "TX_DEVICE_ID": "",
+                        "TX_MENU_LOCK": "UNKN",
+                        "TX_MUTE_BUTTON_STATUS": "UNKN",
+                        "TX_MUTE_STATUS": "UNKN",
+                        "TX_OFFSET": "255",
+                        "TX_POWER_SOURCE": "UNKN",
+                        "TX_PWR_LOCK": "UNKN",
+                        "TX_RF_PWR": "UNKN",
+                        "TX_TYPE": "UNKN"
+                    },
+                    "rf_level": 30,
+                    "runtime": "",
+                    "slot": 9,
+                    "status": "TX_COM_ERROR",
+                    "tx_offset": 255,
+                    "type": "ulxd"
+                }
+            ],
+            "type": "ulxd"
+        },
+        {
+            "ip": "192.168.1.110",
+            "raw": {
+                "DEVICE_ID": "QLXD4",
+                "ENCRYPTION": "OFF",
+                "FW_VER": "2.3.24.10",
+                "MAC_ADDR": "00:0E:DD:4F:31:A1"
+            },
+            "status": "CONNECTED",
+            "tx": [
+                {
+                    "antenna": "XX",
+                    "audio_level": 0,
+                    "battery": 255,
+                    "channel": 1,
+                    "frequency": "477.075",
+                    "id": "",
+                    "name": "",
+                    "name_raw": "Mic 2",
+                    "quality": 255,
+                    "raw": {
+                        "ALL": "XX 032 000",
+                        "AUDIO_GAIN": "008",
+                        "AUDIO_LVL": "000",
+                        "BATT_BARS": "255",
+                        "BATT_CHARGE": "255",
+                        "BATT_CYCLE": "65535",
+                        "BATT_HEALTH": "255",
+                        "BATT_RUN_TIME": "65535",
+                        "BATT_TEMP_C": "255",
+                        "BATT_TEMP_F": "255",
+                        "BATT_TYPE": "UNKN",
+                        "CHAN_NAME": "Mic 2",
+                        "ENCRYPTION_WARNING": "OFF",
+                        "FREQUENCY": "477075",
+                        "GROUP_CHAN": "--,--",
+                        "METER_RATE": "00100",
+                        "RF_ANTENNA": "XX",
+                        "RX_RF_LVL": "030",
+                        "TX_DEVICE_ID": "",
+                        "TX_MENU_LOCK": "UNKN",
+                        "TX_MUTE_BUTTON_STATUS": "UNKN",
+                        "TX_MUTE_STATUS": "UNKN",
+                        "TX_OFFSET": "255",
+                        "TX_POWER_SOURCE": "UNKN",
+                        "TX_PWR_LOCK": "UNKN",
+                        "TX_RF_PWR": "UNKN",
+                        "TX_TYPE": "UNKN"
+                    },
+                    "rf_level": 27,
+                    "runtime": "",
+                    "slot": 10,
+                    "status": "TX_COM_ERROR",
+                    "tx_offset": 255,
+                    "type": "qlxd"
+                }
+            ],
+            "type": "qlxd"
+        },
+        {
+            "ip": "offine device",
+            "tx": [],
+            "type": "offline"
+        }
+    ],
+    "url": "http://172.18.0.2:8058"
+}

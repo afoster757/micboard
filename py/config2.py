@@ -19,6 +19,8 @@ FORMAT = '%(asctime)s %(levelname)s:%(message)s'
 
 config_tree = {}
 
+global gif_dir
+
 gif_dir = ''
 
 group_update_list = []
@@ -107,20 +109,8 @@ def default_gif_dir():
     path = config_path('backgrounds')
     if not os.path.exists(path):
         os.makedirs(path)
-    print("GIFCHECK!")
+    #print("GIFCHECK!")
     return path
-
-def get_gif_dir():
-    if args['background_directory'] is not None:
-        if os.path.exists(os.path.expanduser(args['background_directory'])):
-            return os.path.expanduser(args['background_directory'])
-        else:
-            logging.warning("invalid config path")
-            sys.exit()
-
-    if config_tree.get('background-folder'):
-        return os.path.expanduser(config_tree.get('background-folder'))
-    return default_gif_dir()
 
 def config_file():
     if os.path.exists(app_dir(CONFIG_FILE_NAME)):
@@ -135,6 +125,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-f', '--config-path', help='configuration directory')
     parser.add_argument('-p', '--server-port', help='server port')
+    print('Writing Background Directory...')
     parser.add_argument('-b', '--background-directory', help='background directory')
     args,_ = parser.parse_known_args()
 
@@ -172,6 +163,19 @@ def reconfig(slots):
     for rx in shure.NetworkDevices:
         rx.socket_connect()
 
+def get_gif_dir():
+    if args['background_directory'] is not None:
+        if os.path.exists(os.path.expanduser(args['background_directory'])):
+            return os.path.expanduser(args['background_directory'])
+        else:
+            logging.warning("invalid config path")
+            sys.exit()
+
+    if config_tree.get('background-folder'):
+        return os.path.expanduser(config_tree.get('background-folder'))
+    default = default_gif_dir()
+    return default
+
 def get_version_number():
     with open(app_dir('package.json')) as package:
         pkginfo = json.load(package)
@@ -179,6 +183,7 @@ def get_version_number():
     return pkginfo['version']
 
 def read_json_config(file):
+    print("Reading Config File...")
     global config_tree
     global gif_dir
     with open(file) as config_file:
@@ -255,3 +260,5 @@ def update_slot(data):
         slot_cfg.pop('chan_name_raw')
 
     save_current_config()
+
+

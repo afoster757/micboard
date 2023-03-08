@@ -11,7 +11,7 @@ import sys
 
 import xml.etree.ElementTree as ET
 
-import config
+import config2
 from device_config import BASE_CONST
 
 MCAST_GRP = '239.255.254.253'
@@ -26,7 +26,7 @@ discovered = []
 
 # https://stackoverflow.com/questions/603852/multicast-in-python
 def discover():
-    dcid_restore_from_file(config.app_dir('dcid.json'))
+    dcid_restore_from_file(config2.app_dir('dcid.json'))
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
     # sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1) #mac fix

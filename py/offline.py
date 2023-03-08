@@ -7,7 +7,7 @@ class OfflineDevice:
 
     def get_chan_name(self):
         chan_id = ''
-        chan_name = ''
+        chan_name = 'FC PRODUCTION'
 
         if 'extended_id' in self.cfg:
             chan_id = self.cfg['extended_id']
@@ -28,7 +28,8 @@ class OfflineDevice:
             'status': 'UNASSIGNED',
             'slot': self.slot,
             'name_raw' : name[0] + ' ' + name[1],
-            'frequency': '000000'
+            'frequency': '000000',
+            'pco_name': name[1]
         }
 
 def offline_json():

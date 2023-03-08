@@ -56,8 +56,10 @@ html,body {
 
 .name{
   font-family: 'IBM Plex Sans';
-  font-weight: 400;
-  font-style: bold;
+  font-weight: 800;
+  text-shadow: RGB(0 0 0 / 61%) 2px 2px 10px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 
@@ -289,6 +291,16 @@ canvas.slotgraph {
     height: 100%;
   }
 
+  .mic_name.UNASSIGNED {
+
+    .name {
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      font-size: 40pt;
+      font-weight: 900;
+  }
+  }
+
   .name {
     font-size: calc(1vw + 7pt);
   }
@@ -415,19 +427,18 @@ canvas.slotgraph {
   .mic_id {
     display: inline;
     font-weight: 400;
-    font-size: 18pt;
+    font-size: 14pt;
     text-align: left;
     padding-left: 1em;
   }
 
   .name {
     float: right;
-    font-size: 12pt;
+    font-size: 16pt;
     display: inline;
     font-weight: 400;
     padding-right: 1em;
     text-align: right;
-    font-size: 18pt;
     margin: 0px;
   }
 

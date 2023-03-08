@@ -6,18 +6,25 @@ import { initChart, charts } from './chart-smoothie.js';
 import { seedTransmitters, autoRandom } from './demodata.js';
 import { updateEditor } from './dnd.js';
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function allSlots() {
+  sleep(3000);
   const slot = micboard.config.slots;
-  const out = [];
+    const out = [];
 
-  if (micboard.url.demo) {
-    return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-  }
+    if (micboard.url.demo) {
+      return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    }
 
-  for (let i = 0; i < slot.length; i += 1) {
-    out.push(slot[i].slot);
-  }
-  return out;
+    for (let i = 0; i < slot.length; i += 1) {
+      out.push(slot[i].slot);
+    }
+  ;
+    return out;
+
 }
 
 
@@ -178,13 +185,29 @@ function updateCheck(data, key, callback) {
   }
 }
 
+function updatePCOCheck(data, key, callback) {
+  if (key in data) {
+    let newIndex
+    newIndex = data.slot-1
+    if (micboard.pcoMembers[newIndex][key] !== data[key]) {
+      if (callback) {
+        callback();
+      }
+      micboard.pcoMembers[newIndex][key] = data[key];
+    }
+  }
+}
+
+function updateSelectorPCO(slotSelector, data) {
+  updatePCOCheck(data, 'name', () => {
+    updateName(slotSelector, data);
+  });
+}
+
 
 function updateSelector(slotSelector, data) {
   updateCheck(data, 'id', () => {
     updateID(slotSelector, data);
-  });
-  updateCheck(data, 'name', () => {
-    updateName(slotSelector, data);
   });
   updateCheck(data, 'name_raw');
   updateCheck(data, 'status', () => {
@@ -259,33 +282,13 @@ export function updateSlot(data) {
   }
 }
 
-export function renderDisplayList(dl) {
-  console.log('DL :');
-  console.log(dl);
-  document.getElementById('micboard').innerHTML = '';
+export function updateSlotPCO(data) {
 
-  if (micboard.url.demo) {
-    seedTransmitters(dl);
-    autoRandom();
+  const slot = 'slot-' + data.slot;
+  const slotSelector = document.getElementById(slot);
+  if (slotSelector) {
+    updateSelectorPCO(slotSelector, data);
   }
-
-  const tx = micboard.transmitters;
-  dl.forEach((e) => {
-    let t;
-    if (e !== 0) {
-      t = document.getElementById('column-template').content.cloneNode(true);
-      t.querySelector('div.col-sm').id = 'slot-' + tx[e].slot;
-      updateViewOnly(t, tx[e]);
-      charts[tx[e].slot] = initChart(t, tx[e]);
-    } else {
-      t = document.getElementById('column-template').content.cloneNode(true);
-      t.querySelector('p.name').innerHTML = 'BLANK';
-      t.querySelector('.col-sm').classList.add('blank');
-    }
-    document.getElementById('micboard').appendChild(t);
-  });
-
-  infoToggle();
 }
 
 export function renderGroup(group) {
@@ -312,3 +315,46 @@ export function renderGroup(group) {
     updateEditor(group);
   }
 }
+
+export function renderDisplayList(dl) {
+  console.log('DL :');
+  console.log(dl);
+  document.getElementById('micboard').innerHTML = '';
+
+  if (micboard.url.demo) {
+    seedTransmitters(dl);
+    autoRandom();
+  }
+
+  const tx = micboard.transmitters;
+  dl.forEach((e) => {
+    let t;
+    if (e !== 0) {
+      t = document.getElementById('column-template').content.cloneNode(true);
+      t.querySelector('div.col-sm').id = 'slot-' + tx[e].slot;
+      updateViewOnly(t, tx[e]);
+      charts[tx[e].slot] = initChart(t, tx[e]);
+    } else {
+      t = document.getElementById('column-template').content.cloneNode(true);
+      t.querySelector('p.name').innerHTML = 'BLANK';
+      t.querySelector('.col-sm').classList.add('blank');
+    }
+    document.getElementById('micboard').appendChild(t);
+  });
+
+  const members = micboard.pcoMembers;
+  var memlength = members.length + 1;
+  
+  members.forEach((m) => {
+    let t;
+    if (m.slot !== 0)   {
+      const slot = 'slot-' + m.slot;
+      const slotSelector = document.getElementById(slot);
+      t = slotSelector
+      updateViewOnly(t, m);
+    };
+
+  infoToggle();
+  });
+}
+

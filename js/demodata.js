@@ -4,6 +4,7 @@ import { micboard } from './app.js';
 import { updateSlot } from './channelview.js';
 import { updateChart } from './chart-smoothie.js';
 
+
 let timers = {};
 
 const batterySample = {

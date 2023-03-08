@@ -1,9 +1,10 @@
 'use strict';
 
 import 'whatwg-fetch';
-import { dataURL, ActivateMessageBoard, micboard, updateNavLinks } from './app.js';
-import { renderGroup, updateSlot } from './channelview.js';
+import { dataURL, ActivateMessageBoard, micboard, updateNavLinks, pcoURL} from './app.js';
+import { renderGroup, updateSlot, updateSlotPCO } from './channelview.js';
 import { updateChart } from './chart-smoothie.js';
+
 
 
 export function postJSON(url, data, callback) {
@@ -41,6 +42,21 @@ function JsonUpdate() {
     });
 }
 
+function PcoJsonUpdate() {
+  console.log('Updating PCO Data...');
+  fetch(pcoURL)
+    .then(response => response.json())
+    .then((data) => {
+      if (micboard.pcoMembers != data.pcoMembers ) {
+        //window.location.reload();
+      }
+      //data.scheduled_members.forEach(updateSlotPCO);
+    }).catch((error) => {
+      console.log(error);
+    });
+
+}
+
 
 function updateGroup(data) {
   console.log('dgroup: ' + data.group + ' mgroup: ' + micboard.group);
@@ -54,7 +70,12 @@ function updateGroup(data) {
 
 export function initLiveData() {
   setInterval(JsonUpdate, 1000);
+  setInterval(PcoJsonUpdate, 300000);
   wsConnect();
+}
+
+export function initLiveDataPCO() {
+  
 }
 
 function wsConnect() {
@@ -79,6 +100,9 @@ function wsConnect() {
     }
     if (data['data-update']) {
       data['data-update'].forEach(updateSlot);
+    }
+    if (data['pco-update']) {
+      data['pco-update'].forEach(updateSlotPCO);
     }
 
     if (data['group-update']) {

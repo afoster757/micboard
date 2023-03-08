@@ -4,12 +4,18 @@ MAINTAINER Karl Swanson <karlcswanson@gmail.com>
 
 WORKDIR /usr/src/app
 
+ENV TZ=America/Chicago
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN apt-get install nodejs
+RUN apt-get clean && apt-get update
+RUN apt-get install nodejs npm -y
 
 COPY . .
 
-RUN pip3 install -r py/requirements.txt
+RUN python3 -m pip install -r py/requirements.txt
+RUN npm config set pyhton=python3
+
 RUN npm install --only=prod
 RUN npm run build
 

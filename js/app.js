@@ -7,7 +7,7 @@ import 'whatwg-fetch';
 
 import { autoRandom, seedTransmitters } from './demodata.js';
 import { renderGroup, renderDisplayList, updateSlot } from './channelview.js';
-import { initLiveData } from './data.js';
+import { initLiveData, initLiveDataPCO } from './data.js';
 import { groupEditToggle, initEditor } from './dnd.js';
 import { slotEditToggle } from './extended.js';
 import { keybindings } from './kbd.js';
@@ -21,6 +21,7 @@ import '../node_modules/@ibm/plex/css/ibm-plex.css';
 
 
 export const dataURL = 'data.json';
+export const pcoURL = 'pco.json';
 
 export const micboard = [];
 micboard.MIC_MODELS = ['uhfr', 'qlxd', 'ulxd', 'axtd'];
@@ -38,6 +39,10 @@ micboard.connectionStatus = 'CONNECTING';
 micboard.transmitters = [];
 
 micboard.displayList = [];
+
+micboard.pcoMembers = [];
+
+micboard.pcoPlan = [];
 
 export function ActivateMessageBoard(h1, p) {
   if (!h1) {
@@ -234,7 +239,7 @@ function initialMap(callback) {
         if (micboard.url.demo !== 'true') {
           dataFilterFromList(data);
         }
-        displayListChooser();
+        
 
         if (callback) {
           callback();
@@ -246,10 +251,41 @@ function initialMap(callback) {
           setInfoDrawer(micboard.url.tvmode);
         }
         initEditor();
+
+        fetch(pcoURL)
+        .then((response) => {
+          setTimeMode(response.headers.get('Date'));
+          console.log('Initiating PCO Data');
+          response.json().then((pcodata) => {
+            micboard.pcoMembers = pcodata.scheduled_members;
+            setTimeout(displayListChooser(), 500);
+            
+            if (callback) {
+              callback();
+            }
+          });
+        });
+
+      });
+    });
+      
+  //  initialMapPCO(initLiveDataPCO);
+  }
+
+export function initialMapPCO(callback) {
+  fetch(pcoURL)
+    .then((response) => {
+      setTimeMode(response.headers.get('Date'));
+      console.log('Initiating PCO Data');
+      response.json().then((pcodata) => {
+        micboard.pcoMembers = pcodata.scheduled_members;
+        displayListChooser();
+        if (callback) {
+          callback();
+        }
       });
     });
 }
-
 
 $(document).ready(() => {
   console.log('Starting Micboard version: ' + VERSION);
@@ -261,8 +297,10 @@ $(document).ready(() => {
     }, 100);
 
     initialMap();
+
   } else {
     initialMap(initLiveData);
+
   }
 
   if (micboard.url.settings === 'true') {

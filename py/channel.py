@@ -1,14 +1,13 @@
+from signal import pause
 import time
 import re
 from collections import defaultdict
 import logging
-
-import config
+import config2
 from device_config import BASE_CONST
 
 chart_update_list = []
 data_update_list = []
-
 
 class ChannelDevice:
     def __init__(self, rx, cfg):
@@ -33,20 +32,21 @@ class ChannelDevice:
         self.chan_name_raw = chan_name
 
     def get_chan_name(self):
-        name = self.chan_name_raw.split()
-        prefix = re.match("([A-Za-z]+)?([-]?)([0-9])+", name[0])
-
+       # name = self.chan_name_raw.split()
+        #prefix = re.match("([A-Za-z]+)?([-]?)([0-9])+", name[0])
+        
         chan_id = ''
         chan_name = ''
 
-        if prefix:
-            chan_id = name[0]
-            chan_name = ' '.join(name[1:])
-        elif name[0] == 'IEM' and len(name[1]) == 1:
-            chan_id = ' '.join(name[:2])
-            chan_name = ' '.join(name[2:])
-        else:
-            chan_name = self.chan_name_raw
+        chan_id = self.chan_name_raw
+       # if prefix:
+        #    chan_id = name[0]
+        #    chan_name = ' '.join(name[1:])
+        #elif name[0] == 'IEM' and len(name[1]) == 1:
+        #    chan_id = ' '.join(name[:2])
+        #    chan_name = ' '.join(name[2:])
+       # else:
+       #         chan_name = name[1]
 
         if 'chan_name_raw' in self.cfg:
             if self.cfg['chan_name_raw'] == self.chan_name_raw:
@@ -64,7 +64,7 @@ class ChannelDevice:
                 if 'extended_name' in self.cfg:
                     self.cfg.pop('extended_name')
                 self.cfg.pop('chan_name_raw')
-                config.save_current_config()
+                config2.save_current_config()
 
         return (chan_id, chan_name)
 
